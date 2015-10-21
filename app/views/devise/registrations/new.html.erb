@@ -1,0 +1,44 @@
+<body style="background:#F7F7F7;">
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div id="wrapper">
+      <div id="login" class="animate form">
+         <section class="login_content">
+           <form>
+            <center>
+            <h2>Sign up</h2>
+
+
+            <div class="field">
+              <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Username",:required => "" %>
+              
+            </div><br>
+
+            <div class="field">
+              
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Password",:required => ""  %><br>
+            </div>
+
+            <div class="field">
+              <%= f.label :Password_Confirmation %>
+              <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Password Confirmation",:required => ""  %>
+            </div>
+            <br>
+
+            <div class="actions">
+              <%= f.submit "Sign up", class: :"btn btn-default" %>
+            </div>
+          <% end %>
+
+          <%= render "devise/shared/links" %>
+            </center>
+          </form>
+          </section>
+      </div>
+  </div>
+</body>

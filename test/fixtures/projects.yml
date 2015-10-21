@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_name: MyString
+  description: MyText
+  start_date: 2015-10-11
+  finish_date: 2015-10-11
+  lead_director: MyString
+  programme_manager: MyString
+  project_manager: MyString
+  programme: MyString
+  Transformation: MyString
+  Components: MyString
+  project_outcome: MyText
+  Teras_RMKe-11_Berkaitan: MyString
+  Agenda_Utama_Berkaitan: MyString
+  KPI_UiTM_Berkaitan: MyString
+  deliverables: MyText
+  first_milestone: MyText
+  impact: MyText
+  budget: MyText
+  latihan: MyText
+
+two:
+  project_name: MyString
+  description: MyText
+  start_date: 2015-10-11
+  finish_date: 2015-10-11
+  lead_director: MyString
+  programme_manager: MyString
+  project_manager: MyString
+  programme: MyString
+  Transformation: MyString
+  Components: MyString
+  project_outcome: MyText
+  Teras_RMKe-11_Berkaitan: MyString
+  Agenda_Utama_Berkaitan: MyString
+  KPI_UiTM_Berkaitan: MyString
+  deliverables: MyText
+  first_milestone: MyText
+  impact: MyText
+  budget: MyText
+  latihan: MyText
