@@ -21,7 +21,7 @@
             <div class="field">
                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                 <%= f.text_field :project_name,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
+                 <%= f.text_field :projectname,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
                 </div> 
             </div>
               <br><br>
@@ -36,28 +36,22 @@
 
               <div class="field">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="start-date">Start Date</label>
-                <%= f.date_select :start_date %>
+                <%= f.date_select :startdate %>
               </div>
               <br>
 
               <div class="field">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="end-date">End Date</label>
-                <%= f.date_select :finish_date %>
+                <%= f.date_select :finishdate %>
               </div>
               <br>
 
-              <div class="field">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="lead-director">Lead Director</label>
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                 <%= f.text_field :lead_director,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
-                  </div>   
-              </div>
               <br><br>
-
+              
               <div class="field">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="programme-director">Programme Director</label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                 <%= f.text_field :programme_manager,:size=>"57",:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
+                 <%= f.text_field :programmemanager,:size=>"57",:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
                
               </div>
               <br><br>
@@ -65,7 +59,7 @@
               <div class="field">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="project-director">Project Director</label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                 <%= f.text_field :project_manager,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
+                 <%= f.text_field :projectmanager,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
               </div>
               <br><br>
 
@@ -79,42 +73,42 @@
               <div class="field">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="transformation">Transformation</label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                 <%= f.text_field :Transformation,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
+                 <%= f.text_field :transformation,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
               </div>
               <br><br>
 
               <div class="field">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="components">Components</label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                 <%= f.text_field :Components,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
+                 <%= f.text_field :components,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
               </div>
               <br><br>
 
               <div class="field">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="project-outcome">Project Outcome</label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                 <%= f.text_area :project_outcome,class: :"form-control col-md-7 col-xs-12" %>
+                 <%= f.text_area :projectoutcome,class: :"form-control col-md-7 col-xs-12" %>
               </div>
               <br><br><br>
 
               <div class="field">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="teras-rm-ke-11-berkaitan">Teras RM ke-11 Berkaitan</label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                 <%= f.text_field :Teras_RMKe11_Berkaitan,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
+                 <%= f.text_field :terasrmke11berkaitan,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
               </div>
               <br><br>
 
               <div class="field">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="agenda-utama-berkaitan">Agenda Utama Berkaitan</label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                 <%= f.text_field :Agenda_Utama_Berkaitan,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
+                 <%= f.text_field :agendautamaberkaitan,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
               </div>
               <br><br>
 
               <div class="field">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="kpi-uitm-berkaitan">KPI UiTM Berkaitan</label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                 <%= f.text_field :KPI_UiTM_Berkaitan,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
+                 <%= f.text_field :kpiuitmberkaitan,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
               </div>
               <br><br>
 
@@ -128,7 +122,7 @@
               <div class="field">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-milestone">First Milestone</label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                 <%= f.text_field :first_milestone,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
+                 <%= f.text_field :firstmilestone,:required =>"required",class: :"form-control col-md-7 col-xs-12" %>
               </div>
               <br><br>
 

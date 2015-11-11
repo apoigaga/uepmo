@@ -1,4 +1,4 @@
-class ProjectsController < ApplicationController
+ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   before_action :authenticate_user!
@@ -63,6 +63,15 @@ class ProjectsController < ApplicationController
     end
   end
 
+
+# contoh nk buat file json
+  def listproject
+    project = Project.all
+      
+
+    render json: project
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
@@ -71,6 +80,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:project_name, :description, :start_date, :finish_date, :lead_director, :programme_manager, :project_manager, :programme, :Transformation, :Components, :project_outcome, :Teras_RMKe11_Berkaitan, :Agenda_Utama_Berkaitan, :KPI_UiTM_Berkaitan, :deliverables, :first_milestone, :impact, :budget, :latihan)
+      params.require(:project).permit(:projectname, :description, :startdate, :finishdate, :leaddirector, :programmemanager, :projectmanager, :programme, :transformation, :components, :projectoutcome, :erasrmke11berkaitan, :agendautamaberkaitan, :kpiuitmberkaitan, :deliverables, :firstmilestone, :impact, :budget, :latihan)
     end
 end

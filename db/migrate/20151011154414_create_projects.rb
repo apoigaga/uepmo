@@ -20,6 +20,7 @@ class CreateProjects < ActiveRecord::Migration
       t.text :impact
       t.text :budget
       t.text :latihan
+     
 
       t.timestamps null: false
     end

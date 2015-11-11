@@ -11,102 +11,107 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151011161804) do
+ActiveRecord::Schema.define(version: 20151111200157) do
 
   create_table "approvals", force: :cascade do |t|
-    t.string   "approvals_status_name", limit: 255
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-  end
-
-  create_table "campus", force: :cascade do |t|
-    t.string   "campus_name", limit: 255
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-  end
-
-  create_table "departments", force: :cascade do |t|
-    t.string   "departments_name", limit: 255
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-  end
-
-  create_table "employee_tasks", force: :cascade do |t|
-    t.string   "employee_tasks_name", limit: 255
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-  end
-
-  create_table "employees", force: :cascade do |t|
-    t.string   "employees_name",  limit: 255
-    t.string   "employees_email", limit: 255
-    t.string   "employees_phone", limit: 255
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-  end
-
-  create_table "faculties", force: :cascade do |t|
-    t.string   "faculties_name", limit: 255
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-  end
-
-  create_table "positions", force: :cascade do |t|
-    t.string   "positions_name", limit: 255
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-  end
-
-  create_table "programmes", force: :cascade do |t|
-    t.string   "programmes_name",    limit: 255
-    t.string   "programmes_manager", limit: 255
+    t.string   "approvalstatusname", limit: 255
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
 
-  create_table "project_attachments", force: :cascade do |t|
-    t.string   "project_attachments",      limit: 255
-    t.string   "project_attachments_desc", limit: 255
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+  create_table "campus", force: :cascade do |t|
+    t.string   "campusname", limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
-  create_table "project_statuses", force: :cascade do |t|
-    t.string   "project_statuses_name", limit: 255
+  create_table "departments", force: :cascade do |t|
+    t.string   "departmentname", limit: 255
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "employee_tasks", force: :cascade do |t|
+    t.string   "employeetaskname", limit: 255
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string   "employeename",  limit: 255
+    t.string   "employeeemail", limit: 255
+    t.string   "employeephone", limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "faculties", force: :cascade do |t|
+    t.string   "facultyname", limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "lead_directors", force: :cascade do |t|
+    t.string   "directorname", limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "positions", force: :cascade do |t|
+    t.string   "positionname", limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "programmes", force: :cascade do |t|
+    t.string   "programmename",    limit: 255
+    t.string   "programmemanager", limit: 255
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  create_table "project_attachments", force: :cascade do |t|
+    t.string   "projectattachment",     limit: 255
+    t.string   "projectattachmentdesc", limit: 255
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
   end
 
+  create_table "project_statuses", force: :cascade do |t|
+    t.string   "projectstatusname", limit: 255
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
   create_table "projects", force: :cascade do |t|
-    t.string   "project_name",           limit: 255
-    t.text     "description",            limit: 65535
-    t.date     "start_date"
-    t.date     "finish_date"
-    t.string   "lead_director",          limit: 255
-    t.string   "programme_manager",      limit: 255
-    t.string   "project_manager",        limit: 255
-    t.string   "programme",              limit: 255
-    t.string   "Transformation",         limit: 255
-    t.string   "Components",             limit: 255
-    t.text     "project_outcome",        limit: 65535
-    t.string   "Teras_RMKe11_Berkaitan", limit: 255
-    t.string   "Agenda_Utama_Berkaitan", limit: 255
-    t.string   "KPI_UiTM_Berkaitan",     limit: 255
-    t.text     "deliverables",           limit: 65535
-    t.text     "first_milestone",        limit: 65535
-    t.text     "impact",                 limit: 65535
-    t.text     "budget",                 limit: 65535
-    t.text     "latihan",                limit: 65535
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.string   "projectname",          limit: 255
+    t.text     "description",          limit: 65535
+    t.date     "startdate"
+    t.date     "finishdate"
+    t.string   "programmemanager",     limit: 255
+    t.string   "projectmanager",       limit: 255
+    t.string   "programme",            limit: 255
+    t.string   "transformation",       limit: 255
+    t.string   "components",           limit: 255
+    t.text     "projectoutcome",       limit: 65535
+    t.string   "terasrmke11berkaitan", limit: 255
+    t.string   "agendautamaberkaitan", limit: 255
+    t.string   "kpiuitmberkaitan",     limit: 255
+    t.text     "deliverables",         limit: 65535
+    t.text     "firstmilestone",       limit: 65535
+    t.text     "impact",               limit: 65535
+    t.text     "budget",               limit: 65535
+    t.text     "latihan",              limit: 65535
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "staffs", force: :cascade do |t|
-    t.string   "staffs_name",  limit: 255
-    t.string   "staffs_email", limit: 255
-    t.string   "staffs_phone", limit: 255
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "staffname",  limit: 255
+    t.string   "staffemail", limit: 255
+    t.string   "staffphone", limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
