@@ -1,0 +1,29 @@
+<div class = "pendaftar index">
+
+<table class="listing" summary="pendaftar list">
+<tr>
+	<th>username</th>
+	<th>name</th>
+	<th>email</th>
+	<th>actions</th>
+</tr>
+<% @projects.each do |pendaftar| %>
+	<tr>
+        <th scope="row">*</th>
+        <td><%= pendaftar.projectname %></td>
+        <td><%= pendaftar.startdate %></td>
+        <td><%= pendaftar.finishdate %></td>
+        <td><%= pendaftar.leaddirector.try(:directorname) %></td>
+       <td><%= pendaftar.programmemanager %></td>
+       <td><%= pendaftar.projectmanager %></td>
+       <td>
+                                                    
+                                                    <%= link_to 'Show', project, :class =>"btn btn-success btn-xs" %>
+                                                    <%= link_to 'Edit', edit_project_path(project), :class =>"btn btn-info btn-xs" %>
+                                                    <%= link_to 'Destroy', project,:class =>"btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+                                                </td>
+                                            <tr>
+                                           <% end %>
+                                      
+
+                                      <h1>zcnnfvljbvskj</h1>

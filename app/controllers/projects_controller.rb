@@ -7,11 +7,17 @@
   # GET /projects.json
   def index
     @projects = Project.all
+    
   end
+
+ 
 
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @project = Project.find(params[:id])
+    #@project = Project.find_by(category: params[:cat])
+    #@project ||= Project.find(params[:id])
   end
 
   # GET /projects/new
@@ -21,7 +27,10 @@
 
   # GET /projects/1/edit
   def edit
+    
   end
+
+  
 
   # POST /projects
   # POST /projects.json
@@ -69,17 +78,21 @@
     project = Project.all
       
 
-    render json: project
+    render json: project 
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Project.find(params[:id])
+      #@project = Project.find(params[:id])
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:projectname, :description, :startdate, :finishdate, :leaddirector, :programmemanager, :projectmanager, :programme, :transformation, :components, :projectoutcome, :erasrmke11berkaitan, :agendautamaberkaitan, :kpiuitmberkaitan, :deliverables, :firstmilestone, :impact, :budget, :latihan)
+      params.require(:project).permit(:projectname, :description, :startdate, :finishdate, 
+        :leaddirector, :programmemanager, :projectmanager, :programme, :transformation, :components, 
+        :projectoutcome, :terasrmke11berkaitan, :agendautamaberkaitan, :kpiuitmberkaitan, :deliverables, :firstmilestone, 
+        :impact, :budget, :latihan)
     end
 end

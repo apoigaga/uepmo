@@ -1,0 +1,2 @@
+module LeaddirectorControllerHelper
+end

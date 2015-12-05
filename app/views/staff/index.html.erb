@@ -1,0 +1,21 @@
+
+<h1>Listing Projects</h1>
+<div class=class="col-md-15 col-sm-3">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                   
+                                        <% @staffs.each do |staff| %>
+
+                                           <%= text_field :staffname, :value=> staff.staffname  %>
+                                        <% end %>
+                                    
+                                </div>
+                            </div>
+ </div>
+
+<br>
+
+<%= link_to 'New Project', new_project_path,:class =>"btn btn-primary" %>

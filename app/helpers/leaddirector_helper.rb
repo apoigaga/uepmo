@@ -1,0 +1,2 @@
+module LeaddirectorHelper
+end

@@ -1,7 +1,25 @@
 Rails.application.routes.draw do
   
+  get 'resumes/index'
+
+  get 'resumes/new'
+
+  get 'resumes/create'
+
+  get 'resumes/destroy'
+
   devise_for :users
   resources :projects
+
+  resources :pendaftar
+  get "pendaftar/index" => "pendaftar#index"
+  
+
+  
+
+
+
+  resources :staff
   root 'projects#index'
 
   #get 'page/project'
@@ -15,6 +33,12 @@ Rails.application.routes.draw do
   get 'page/project_health'
 
   get 'page/pendaftar'
+
+  #match ':controller(/:pendaftar)'
+
+  #get 'projects/pendaftar'
+
+ # get 'projects/pendaftar' => 'projects#pendaftar'
 
   get 'list-project' => 'projects#listproject'
 
@@ -72,4 +96,10 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  #ini untuk file uploader
+  resources :resumes, only: [:index, :new, :create, :destroy]
+   get 'resumes/index'
+   
+
 end

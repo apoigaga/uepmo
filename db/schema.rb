@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151111200157) do
+ActiveRecord::Schema.define(version: 20151130162424) do
 
   create_table "approvals", force: :cascade do |t|
     t.string   "approvalstatusname", limit: 255
@@ -31,12 +31,6 @@ ActiveRecord::Schema.define(version: 20151111200157) do
     t.datetime "updated_at",                 null: false
   end
 
-  create_table "employee_tasks", force: :cascade do |t|
-    t.string   "employeetaskname", limit: 255
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-  end
-
   create_table "employees", force: :cascade do |t|
     t.string   "employeename",  limit: 255
     t.string   "employeeemail", limit: 255
@@ -45,16 +39,27 @@ ActiveRecord::Schema.define(version: 20151111200157) do
     t.datetime "updated_at",                null: false
   end
 
+  create_table "employeetask", force: :cascade do |t|
+    t.string   "employeetaskname", limit: 255
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
   create_table "faculties", force: :cascade do |t|
     t.string   "facultyname", limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
 
-  create_table "lead_directors", force: :cascade do |t|
+  create_table "leaddirectors", force: :cascade do |t|
     t.string   "directorname", limit: 255
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "pendaftars", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "positions", force: :cascade do |t|
@@ -70,17 +75,11 @@ ActiveRecord::Schema.define(version: 20151111200157) do
     t.datetime "updated_at",                   null: false
   end
 
-  create_table "project_attachments", force: :cascade do |t|
+  create_table "projectattachment", force: :cascade do |t|
     t.string   "projectattachment",     limit: 255
     t.string   "projectattachmentdesc", limit: 255
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
-  end
-
-  create_table "project_statuses", force: :cascade do |t|
-    t.string   "projectstatusname", limit: 255
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
   end
 
   create_table "projects", force: :cascade do |t|
@@ -88,6 +87,7 @@ ActiveRecord::Schema.define(version: 20151111200157) do
     t.text     "description",          limit: 65535
     t.date     "startdate"
     t.date     "finishdate"
+    t.integer  "leaddirector_id",      limit: 4
     t.string   "programmemanager",     limit: 255
     t.string   "projectmanager",       limit: 255
     t.string   "programme",            limit: 255
@@ -104,6 +104,20 @@ ActiveRecord::Schema.define(version: 20151111200157) do
     t.text     "latihan",              limit: 65535
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+    t.integer  "staff_id",             limit: 4
+  end
+
+  create_table "projectstatus", force: :cascade do |t|
+    t.string   "projectstatusname", limit: 255
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  create_table "resumes", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "attachment", limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "staffs", force: :cascade do |t|

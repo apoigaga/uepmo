@@ -1,102 +1,118 @@
-<h1>Page#project_health</h1>
-<p>Find me in app/views/page/project_health.html.erb</p>
- <div class=class="col-md-15 col-sm-3">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>Hover rows <small>Try hovering over the rows</small></h2>
-                                    
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Project Name</th>
-                                                <th>Start date</th>
-                                                <th>Finish date</th>
-                                                <th>Project Status</th>
-                                                <th>Edit</th>
 
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Pengarah Peneraju : Pendaftar</td>
-                                                <td>2.04.2015</td>
-                                                <td>19.08.2016</td>
-                                                <td>status</td>
-                                                <td>
-                                                    <a href="pendaftar" button type="button" class="btn btn-success btn-xs">View</button>
-                                                </td>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Pengarah Peneraju : Bendahari</td>
-                                                <td>16.04.2015</td>
-                                                <td>31.12.2020</td>
-                                                <td>status</td>
-                                                <td>
-                                                    <a href="approval" button type="button" class="btn btn-success btn-xs">View</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Pengarah Peneraju : Timb Naib Canselor (Akademik & Antarabangsa)</td>
-                                                <td>01.01.2013</td>
-                                                <td>21.12.2019</td>
-                                                <td>status</td>
-                                                <td>
-                                                    <a href="#" button type="button" class="btn btn-success btn-xs">View</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">4</th>
-                                                <td>Pengarah Peneraju : Timb Naib Canselor (Hal Ehwal Pelajar)</td>
-                                                <td>01.05.2014</td>
-                                                <td>01.01.2018</td>
-                                                <td>status</td>
-                                                <td>
-                                                    <a href="#" button type="button" class="btn btn-success btn-xs">View</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">5</th>
-                                                <td>Pengarah Peneraju : Timb Naib Canselor (Jaringan Industri; Masyarakat & Alumni)</td>
-                                                <td>01.01.2015</td>
-                                                <td>31.12.2018</td>
-                                                <td>status</td>
-                                                <td>
-                                                    <a href="#" button type="button" class="btn btn-success btn-xs">View</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">6</th>
-                                                <td>Pengarah Peneraju : Timb Naib Canselor (Penyelidikan & Inovasi)</td>
-                                                <td>01.01.2014</td>
-                                                <td>01.01.2021</td>
-                                                <td>status</td>
-                                                <td>
-                                                    <a href="#" button type="button" class="btn btn-success btn-xs">View</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">7</th>
-                                                <td>Pengarah Peneraju : Timb Naib Canselor (Akademik)</td>
-                                                <td>01.06.2014</td>
-                                                <td>31.07.2017</td>
-                                                <td>status</td>
-                                                <td>
-                                                    <a href="#" button type="button" class="btn btn-success btn-xs">View</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+<html lang="en">
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-                                </div>
-                            </div>
- </div>
+<body class="nav-md">
+
+    <div class="container body">
 
 
- <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
-        <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+        <div id="container" style="height: 400px"></div><br>
+
+        <div id="container1" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+    </div>
+
+<script>
+    $(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: 'Browser market shares at a specific website, 2014'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['Firefox', 45.0],
+                ['IE', 26.8],
+                {
+                    name: 'Chrome',
+                    y: 12.8,
+                    sliced: true,
+                    selected: true
+                },
+                ['Safari', 8.5],
+                ['Opera', 6.2],
+                ['Others', 0.7]
+            ]
+        }]
+    });
+});
+</script>
+
+<script>
+    $(function () {
+    $('#container1').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Stacked bar chart'
+        },
+        xAxis: {
+            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total fruit consumption'
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+            name: 'John',
+            data: [5, 3, 4, 7, 2]
+        }, {
+            name: 'Jane',
+            data: [2, 2, 3, 2, 1]
+        }, {
+            name: 'Joe',
+            data: [3, 4, 4, 2, 5]
+        }]
+    });
+});
+
+
+
+</script>
+     
+
+   
+
+
+
+
+</body>
+
+</html>

@@ -21,9 +21,9 @@
 </p>
 
 <p>
-  <!-- <strong>Lead director:</strong>
-  <%= @project.lead_director %> -->
-</p>
+  <strong>Lead director:</strong>
+  <%= @project.leaddirector.directorname %>
+</p> 
 
 <p>
   <strong>Programme manager:</strong>
@@ -95,5 +95,5 @@
   <%= @project.latihan %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'Edit', edit_project_path(@project), :class =>"btn btn-info" %> |
+<%= link_to 'Back', projects_path, :class =>"btn btn-primary" %>

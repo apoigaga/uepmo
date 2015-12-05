@@ -1,4 +1,105 @@
-<p id="notice"><%= notice %></p>
+
+
+<div class=class="col-md-15 col-sm-3">
+                            <div class="x_panel">
+                                
+                                <div class="x_content">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Project Name</th>
+                                                <th>Start date</th>
+                                                <th>Finish date</th>
+                                                <th>Project Status</th>
+                                                <th>Edit</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Pengarah Peneraju : Pendaftar</td>
+                                                <td>2.04.2015</td>
+                                                <td>19.08.2016</td>
+                                                <td>status</td>
+                                                <td>
+                                                    
+                                                
+                                                      <a href=" /projects/?cat=pendaftar" button type="button" class="btn btn-success btn-xs">View</button>
+                                                </td>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Pengarah Peneraju : Bendahari</td>
+                                                <td>16.04.2015</td>
+                                                <td>31.12.2020</td>
+                                                <td>status</td>
+                                                <td>
+                                                    <a href="approval" button type="button" class="btn btn-success btn-xs">View</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Pengarah Peneraju : Timb Naib Canselor (Akademik & Antarabangsa)</td>
+                                                <td>01.01.2013</td>
+                                                <td>21.12.2019</td>
+                                                <td>status</td>
+                                                <td>
+                                                    <a href="#" button type="button" class="btn btn-success btn-xs">View</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>Pengarah Peneraju : Timb Naib Canselor (Hal Ehwal Pelajar)</td>
+                                                <td>01.05.2014</td>
+                                                <td>01.01.2018</td>
+                                                <td>status</td>
+                                                <td>
+                                                    <a href="#" button type="button" class="btn btn-success btn-xs">View</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>Pengarah Peneraju : Timb Naib Canselor (Jaringan Industri; Masyarakat & Alumni)</td>
+                                                <td>01.01.2015</td>
+                                                <td>31.12.2018</td>
+                                                <td>status</td>
+                                                <td>
+                                                    <a href="#" button type="button" class="btn btn-success btn-xs">View</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">6</th>
+                                                <td>Pengarah Peneraju : Timb Naib Canselor (Penyelidikan & Inovasi)</td>
+                                                <td>01.01.2014</td>
+                                                <td>01.01.2021</td>
+                                                <td>status</td>
+                                                <td>
+                                                    <a href="#" button type="button" class="btn btn-success btn-xs">View</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">7</th>
+                                                <td>Pengarah Peneraju : Timb Naib Canselor (Akademik)</td>
+                                                <td>01.06.2014</td>
+                                                <td>31.07.2017</td>
+                                                <td>status</td>
+                                                <td>
+                                                    <a href="#" button type="button" class="btn btn-success btn-xs">View</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+ </div>
+
+
+
+
+
 
 <h1>Listing Projects</h1>
 <div class=class="col-md-15 col-sm-3">
@@ -12,8 +113,8 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Project name</th>
-                                                <th>Start date</th>
-                                                <th>Finish date</th>
+                                                <th>Start</th>
+                                                <th>Finish</th>
                                                 <th>Lead director</th>
                                                 <th>Programme manager</th>
                                                 <th>Project manager</th>
@@ -28,10 +129,11 @@
                                                 <td><%= project.projectname %></td>
                                                 <td><%= project.startdate %></td>
                                                 <td><%= project.finishdate %></td>
-                                                <td></td>
+                                                <td><%= project.leaddirector.try(:directorname) %></td>
                                                 <td><%= project.programmemanager %></td>
                                                 <td><%= project.projectmanager %></td>
                                                 <td>
+                                                    
                                                     
                                                     <%= link_to 'Show', project, :class =>"btn btn-success btn-xs" %>
                                                     <%= link_to 'Edit', edit_project_path(project), :class =>"btn btn-info btn-xs" %>
