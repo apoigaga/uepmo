@@ -12,12 +12,20 @@ Rails.application.routes.draw do
   resources :projects
 
   resources :pendaftar
-  get "pendaftar/index" => "pendaftar#index"
+  #get "pendaftar/index" => "pendaftar#index"
+  
+ # match "projects/pendaftar" ,:to =>"projects#pendaftar"
+ get 'pendaftar2' => "projects#pendaftar", as: :pendaftar2
+ get 'bendahari' => "projects#bendahari", as: :bendahari
+ get 'antarabangsa' => "projects#antarabangsa", as: :antarabangsa
+ get 'hep' => "projects#hep", as: :hep
+ get 'jaringan' => "projects#jaringan", as: :jaringan
+ get 'penyelidikan' => "projects#penyelidikan", as: :penyelidikan
+ get 'akademik' => "projects#akademik", as: :akademik
+
   
 
-  
-
-
+ 
 
   resources :staff
   root 'projects#index'

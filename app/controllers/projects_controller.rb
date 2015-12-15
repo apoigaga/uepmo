@@ -10,6 +10,35 @@
     
   end
 
+  def pendaftar
+    @projects = Project.all
+  end
+
+  def bendahari
+    @projects = Project.all
+  end
+
+def antarabangsa
+    @projects = Project.all
+  end
+
+  def hep
+    @projects = Project.all
+  end
+
+  def jaringan
+    @projects = Project.all
+  end
+
+  def penyelidikan
+    @projects = Project.all
+  end
+
+  def akademik
+    @projects = Project.all
+  end
+
+
  
 
   # GET /projects/1
@@ -84,7 +113,7 @@
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      #@project = Project.find(params[:id])
+      @project = Project.find(params[:id])
 
     end
 

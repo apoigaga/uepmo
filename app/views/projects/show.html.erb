@@ -2,97 +2,97 @@
 
 <p>
   <strong>Project name:</strong>
-  <%= @project.projectname %>
+  <%= @project.projectname rescue '-' %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @project.description %>
+  <%= @project.description rescue '-'%>
 </p>
 
 <p>
   <strong>Start date:</strong>
-  <%= @project.startdate %>
+  <%= @project.startdate rescue '-'%>
 </p>
 
 <p>
   <strong>Finish date:</strong>
-  <%= @project.finishdate %>
+  <%= @project.finishdate rescue '-'%>
 </p>
 
 <p>
   <strong>Lead director:</strong>
-  <%= @project.leaddirector.directorname %>
+  <%= @project.leaddirector.directorname rescue '-'%>
 </p> 
 
 <p>
   <strong>Programme manager:</strong>
-  <%= @project.programmemanager %>
+  <%= @project.programmemanager rescue '-'%>
 </p>
 
 <p>
   <strong>Project manager:</strong>
-  <%= @project.projectmanager %>
+  <%= @project.projectmanager rescue '-'%>
 </p>
 
 <p>
   <strong>Programme:</strong>
-  <%= @project.programme %>
+  <%= @project.programme rescue '-'%>
 </p>
 
 <p>
   <strong>Transformation:</strong>
-  <%= @project.transformation %>
+  <%= @project.transformation rescue '-'%>
 </p>
 
 <p>
   <strong>Components:</strong>
-  <%= @project.components %>
+  <%= @project.components rescue '-'%>
 </p>
 
 <p>
   <strong>Project outcome:</strong>
-  <%= @project.projectoutcome %>
+  <%= @project.projectoutcome rescue '-'%>
 </p>
 
 <p>
   <strong>Teras rmke-11 berkaitan:</strong>
-  <%= @project.terasrmke11berkaitan %>
+  <%= @project.terasrmke11berkaitan rescue '-'%>
 </p>
 
 <p>
   <strong>Agenda utama berkaitan:</strong>
-  <%= @project.agendautamaberkaitan %>
+  <%= @project.agendautamaberkaitan rescue '-'%>
 </p>
 
 <p>
   <strong>Kpi uitm berkaitan:</strong>
-  <%= @project.kpiuitmberkaitan %>
+  <%= @project.kpiuitmberkaitan rescue '-'%>
 </p>
 
 <p>
   <strong>Deliverables:</strong>
-  <%= @project.deliverables %>
+  <%= @project.deliverables rescue '-'%>
 </p>
 
 <p>
   <strong>First milestone:</strong>
-  <%= @project.firstmilestone %>
+  <%= @project.firstmilestone rescue '-'%>
 </p>
 
 <p>
   <strong>Impact:</strong>
-  <%= @project.impact %>
+  <%= @project.impact rescue '-' %>
 </p>
 
 <p>
   <strong>Budget:</strong>
-  <%= @project.budget %>
+  <%= @project.budget rescue '-'%>
 </p>
 
 <p>
   <strong>Latihan:</strong>
-  <%= @project.latihan %>
+  <%= @project.latihan rescue '-'%>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project), :class =>"btn btn-info" %> |
